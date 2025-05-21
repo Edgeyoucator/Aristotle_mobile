@@ -56,3 +56,10 @@ interact('.drop-zone, .drop-cell').dropzone({
     event.target.classList.remove('drop-target');
   }
 });
+
+// Prevent scrolling while dragging on touch devices
+document.body.addEventListener('touchmove', e => {
+  if (document.querySelector('.dragging')) {
+    e.preventDefault();
+  }
+}, { passive: false });

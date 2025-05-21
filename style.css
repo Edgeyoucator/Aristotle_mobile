@@ -108,3 +108,8 @@ p {
 .blur-background *:not(#splash-screen):not(script) {
   filter: blur(4px);
 }
+
+.draggable {
+  touch-action: none;
+  -ms-touch-action: none; /* for older devices */
+}
